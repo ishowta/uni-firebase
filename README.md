@@ -20,10 +20,26 @@ export const getUser = (
 
 ```ts
 // app/src/@types/uni-firebase.d.ts
+
+// If this is Web app
 import { FirestoreWebTypes } from 'uni-firebase'
 
 declare module 'uni-firebase' {
   interface FirestoreInjectedTypes<T> extends FirestoreWebTypes<T> {}
+}
+
+// If this is Admin service
+import { FirestoreAdminTypes } from 'uni-firebase'
+
+declare module 'uni-firebase' {
+  interface FirestoreInjectedTypes<T> extends FirestoreAdminTypes<T> {}
+}
+
+// If this is Mobile app
+import { FirestoreNativeTypes } from 'uni-firebase'
+
+declare module 'uni-firebase' {
+  interface FirestoreInjectedTypes<T> extends FirestoreNativeTypes<T> {}
 }
 ```
 
