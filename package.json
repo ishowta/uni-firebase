@@ -3,22 +3,11 @@
   "version": "0.1.0",
   "license": "MIT",
   "author": "ishowta",
-  "main": "dist/index.js",
-  "module": "dist/uni-firebase.esm.js",
-  "typings": "dist/index.d.ts",
+  "typings": "src/index.d.ts",
   "files": [
-    "dist",
     "src"
   ],
-  "scripts": {
-    "analyze": "size-limit --why",
-    "build": "dts build",
-    "lint": "dts lint",
-    "prepare": "dts build",
-    "size": "size-limit",
-    "start": "dts watch",
-    "test": "dts test"
-  },
+  "scripts": {},
   "dependencies": {
     "@google-cloud/firestore": "^4.15.1",
     "@react-native-firebase/app": "^13.0.1",
